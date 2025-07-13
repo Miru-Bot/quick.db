@@ -1,8 +1,9 @@
 {
     "name": "miru.quick.db",
-    "version": "10.0.0",
+    "version": "10.1.0",
     "description": "Private quick.db module for Miru",
     "main": "out/index.js",
+    "module": "out/index.js",
     "types": "out/index.d.ts",
     "engines": {
         "node": ">=14.0.0"
@@ -47,14 +48,13 @@
     },
     "exports": {
         ".": {
-            "default": "./out/index.js",
+            "require": "./out/index.js",
+            "import": "./out/index.js",
             "types": "./out/index.d.ts"
         },
-        "./*": {
-            "default": "./out/drivers/*.js",
-            "types": "./out/drivers/*.d.ts"
-        }
+        "./*": "./out/drivers/*"
     },
+    "files": ["out"],
     "scripts": {
         "build": "tsc",
         "clean": "rm -rf ./out"
