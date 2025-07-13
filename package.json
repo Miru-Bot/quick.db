@@ -1,0 +1,82 @@
+{
+    "name": "miru.quick.db",
+    "version": "10.0.0",
+    "description": "Private quick.db module for Miru",
+    "main": "out/index.js",
+    "types": "out/index.d.ts",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "devDependencies": {
+        "@types/better-sqlite3": "^7.6.13",
+        "@types/lodash": "^4.17.20",
+        "@types/pg": "^8.15.4",
+        "@types/write-file-atomic": "^4.0.3",
+        "typescript": "^5.8.3"
+    },
+    "peerDependencies": {
+        "better-sqlite3": "8.x || 9.x",
+        "cassandra-driver": "4.x",
+        "mongoose": "7.x || 8.x",
+        "mysql2": "3.x",
+        "pg": "8.x",
+        "write-file-atomic": "5.x"
+    },
+    "peerDependenciesMeta": {
+        "better-sqlite3": {
+            "optional": true
+        },
+        "mongoose": {
+            "optional": true
+        },
+        "mysql2": {
+            "optional": true
+        },
+        "pg": {
+            "optional": true
+        },
+        "write-file-atomic": {
+            "optional": true
+        },
+        "cassandra-driver": {
+            "optional": true
+        }
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    },
+    "exports": {
+        ".": {
+            "default": "./out/index.js",
+            "types": "./out/index.d.ts"
+        },
+        "./*": {
+            "default": "./out/drivers/*.js",
+            "types": "./out/drivers/*.d.ts"
+        }
+    },
+    "scripts": {
+        "build": "tsc",
+        "clean": "rm -rf ./out"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TrueXPixels/quick.db.git"
+    },
+    "keywords": [
+        "database",
+        "storing",
+        "values",
+        "easy",
+        "quick",
+        "sqlite",
+        "sqlite3",
+        "db"
+    ],
+    "author": "iMrlvn",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TrueXPixels/quick.db/issues"
+    },
+    "homepage": "https://quickdb.js.org"
+}
