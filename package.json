@@ -1,6 +1,6 @@
 {
     "name": "miru.quick.db",
-    "version": "10.1.1",
+    "version": "10.1.2",
     "description": "Private quick.db module for Miru",
     "main": "out/index.js",
     "module": "out/index.js",
@@ -52,7 +52,7 @@
             "import": "./out/index.js",
             "types": "./out/index.d.ts"
         },
-        "./*": "./out/drivers/*"
+        "./*": "./out/drivers/*.js"
     },
     "files": ["out"],
     "scripts": {
